@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ekolojik Kredi Sistemi</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Sol Menü -->
+    <div id="menu" class="menu">
+        <ul>
+            <li><button onclick="toggleForm('nedirForm')">Nedir?</button></li>
+            <li><button onclick="toggleForm('ekolojikKrediForm')">Ekolojik Kredi</button></li>
+            <li><button onclick="toggleForm('geriDonusumForm')">Geri Dönüşüm Nedir?</button></li>
+            <li><button onclick="toggleForm('bizeUlasinForm')">Bize Ulaşın</button></li>
+            <li><button onclick="toggleForm('hazirlayanlarForm')">Hazırlayanlar</button></li>
+            <li><button onclick="toggleForm('okulKayitFormContainer')">Okul Kaydı</button></li>
+            <li><button onclick="toggleForm('ogrenciKayitFormContainer')">Öğrenci Kaydı</button></li>
+            <li><button onclick="toggleForm('dataEntryFormContainer')">Veri Girişi</button></li>
+            <li><button onclick="toggleForm('viewDataFormContainer')">Veri Görüntüle</button></li>
+        </ul>
+    </div>
+
+    <!-- Ana İçerik Alanı -->
+    <div id="content">
+        <!-- Nedir? -->
+        <div id="nedirForm" class="form-container">
+            <h2>Nedir?</h2>
+            <p>Ekolojik Kredi, geri dönüşüm ve çevre bilincini artırmak için geliştirilen bir sistemdir. Öğrenciler geri dönüşüm yapan atıklar ile kredi kazanarak ekolojik katkı sağlarken, çevre dostu uygulamaları teşvik eder.</p>
+        </div>
+
+        <!-- Ekolojik Kredi -->
+        <div id="ekolojikKrediForm" class="form-container">
+            <h2>Ekolojik Kredi</h2>
+            <p>Ekolojik kredi, geri dönüşüm faaliyetlerine katılımın karşılığı olarak kazanılan bir puan sistemidir. Öğrenciler geri dönüştürülen her atık türü için kredi kazanarak ekolojik sorumluluklarını artırırlar.</p>
+        </div>
+
+        <!-- Geri Dönüşüm Nedir? -->
+        <div id="geriDonusumForm" class="form-container">
+            <h2>Geri Dönüşüm Nedir?</h2>
+            <p>Geri dönüşüm, atık malzemelerin işlenip tekrar kullanılabilir hale getirilmesi işlemidir. Bu süreç doğaya zarar vermeden hammadde tasarrufu sağlar ve enerji kullanımını azaltır.</p>
+        </div>
+
+        <!-- Bize Ulaşın -->
+        <div id="bizeUlasinForm" class="form-container">
+            <h2>Bize Ulaşın</h2>
+            <p>İzmir Torbalı Anadolu Lisesi</p>
+            <p>Email: <a href="mailto:ekolojikkreditubitak@gmail.com">ekolojikkreditubitak@gmail.com</a></p>
+        </div>
+
+        <!-- Hazırlayanlar -->
+        <div id="hazirlayanlarForm" class="form-container">
+            <h2>Hazırlayanlar</h2>
+            <p>Danışman Öğretmen: Osman Onuk</p>
+            <p>Öğrenciler: Muhammedcan Arslanparçası, Bilal Yiğit Tezcan, Yağız Efe Yılmaz</p>
+        </div>
+
+        <!-- Okul Kaydı -->
+        <div id="okulKayitFormContainer" class="form-container">
+            <h2>Okul Kaydı</h2>
+            <form id="okulKayitForm">
+                <input type="text" id="schoolProvince" placeholder="İl" required><br>
+                <input type="text" id="schoolDistrict" placeholder="İlçe" required><br>
+                <input type="text" id="schoolName" placeholder="Okul Adı" required><br>
+                <input type="password" id="schoolPassword" placeholder="Şifre" required><br>
+                <button type="submit">Okul Kaydı Yap</button>
+            </form>
+        </div>
+
+        <!-- Öğrenci Kaydı -->
+        <div id="ogrenciKayitFormContainer" class="form-container">
+            <h2>Öğrenci Kaydı</h2>
+            <form id="ogrenciKayitForm">
+                <input type="text" id="studentName" placeholder="Ad" required><br>
+                <input type="text" id="studentSurname" placeholder="Soyad" required><br>
+                <input type="email" id="studentEmail" placeholder="E-posta" required><br>
+                <input type="text" id="studentNumber" placeholder="Öğrenci Numarası" required><br>
+                <input type="text" id="studentPhone" placeholder="Telefon Numarası"><br>
+                <input type="text" id="studentClass" placeholder="Sınıf" required><br>
+                <button type="submit">Öğrenci Kaydı Yap</button>
+            </form>
+        </div>
+
+        <!-- Veri Girişi -->
+        <div id="dataEntryFormContainer" class="form-container">
+            <h2>Veri Girişi</h2>
+            <form id="dataEntryForm">
+                <input type="text" id="studentNumberEntry" placeholder="Öğrenci Numarası" required><br>
+                <input type="number" id="wasteWeight" placeholder="Atık Miktarı (kg)" required><br>
+                <select id="wasteType" required>
+                    <option value="Yağ">Yağ</option>
+                    <option value="Tekstil">Tekstil</option>
+                    <option value="Pil">Pil</option>
+                    <option value="Elektronik">Elektronik</option>
+                    <option value="Kağıt">Kağıt</option>
+                    <option value="Cam">Cam</option>
+                    <option value="Metal">Metal</option>
+                    <option value="Plastik">Plastik</option>
+                </select><br>
+                <input type="text" id="enteredBy" placeholder="Veri Girişi Yapan" required><br>
+                <button type="submit">Veri Girişi Yap</button>
+            </form>
+        </div>
+
+        <!-- Veri Görüntüleme -->
+        <div id="viewDataFormContainer" class="form-container">
+            <h2>Veri Görüntüle</h2>
+            <form id="viewDataForm">
+                <input type="email" id="viewStudentEmail" placeholder="Öğrenci E-posta" required><br>
+                <input type="text" id="viewStudentNumber" placeholder="Öğrenci Numarası" required><br>
+                <button type="submit">Veri Görüntüle</button>
+            </form>
+            <div id="viewResult"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
